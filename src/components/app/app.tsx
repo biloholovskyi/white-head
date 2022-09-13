@@ -1,12 +1,9 @@
 import { FC } from 'react'
-import Button from '@mui/material/Button'
+
+import RouterComponent from '../../routing/routerComponent'
 
 const App: FC = (): JSX.Element => {
-  return (
-    <>
-      <Button>Test click</Button>
-    </>
-  )
+  return <RouterComponent />
 }
 
 export default App
