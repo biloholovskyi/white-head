@@ -1,18 +1,19 @@
 import React from 'react'
 
-// import {IRoute} from "../types/IRoute";
+import { IRoute } from '../types/IRoute'
 
-const Auth = (): JSX.Element => {
-  return <div>Auth</div>
-}
+import Cases from '../pages/cases'
+import Auth from '../pages/auth'
 
 export enum RouteNames {
   AUTH = '/auth',
-  TEST_CLOSE = '/test',
+  CASES = '/cases',
 }
 
-export const publicRoutes = [{ path: RouteNames.AUTH, element: <Auth /> }]
+export const publicRoutes: IRoute[] = [
+  { path: RouteNames.AUTH, element: <Auth /> },
+]
 
-export const privateRoutes = [
-  { path: RouteNames.TEST_CLOSE, element: <div>Test Page</div> },
+export const privateRoutes: IRoute[] = [
+  { path: RouteNames.CASES, element: <Cases /> },
 ]

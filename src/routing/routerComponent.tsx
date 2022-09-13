@@ -17,7 +17,7 @@ const RouterComponent: FC = (): JSX.Element | null => {
         {privateRoutes?.map((route) => (
           <Route key={route.path} {...route} />
         ))}
-        <Route path={'*'} element={<Navigate replace to='/' />} />
+        <Route path={'*'} element={<Navigate replace to='/cases' />} />
       </Routes>
     )
   }
