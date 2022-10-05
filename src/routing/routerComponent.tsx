@@ -1,11 +1,13 @@
 import React, { FC } from 'react'
 import { Navigate, Route, Routes } from 'react-router'
 
+import { useAppSelector } from '../hooks/redux'
+
 import { privateRoutes, publicRoutes } from './router'
 
 const RouterComponent: FC = (): JSX.Element | null => {
+  const { user } = useAppSelector((state) => state.user)
   const loading = false
-  const user = false
 
   if (loading) {
     return null
