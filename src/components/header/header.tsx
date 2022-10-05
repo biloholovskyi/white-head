@@ -4,7 +4,7 @@ import { loginUser } from '../../store/slices/user.slice'
 
 import DefaultButton from '../UI/buttons/defaultButton/defaultButton'
 
-import { HeaderWrapper } from './styled'
+import { HeaderWrapper, HeaderTitle } from './styled'
 
 const Header = (): JSX.Element => {
   const dispatch = useAppDispatch()
@@ -19,6 +19,7 @@ const Header = (): JSX.Element => {
 
   return (
     <HeaderWrapper>
+      <HeaderTitle to={'/cases'}>White Head Studio</HeaderTitle>
       <DefaultButton onClick={signOut}>Sign Out</DefaultButton>
     </HeaderWrapper>
   )
