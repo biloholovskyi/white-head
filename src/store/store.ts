@@ -2,10 +2,12 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 
 import userSlice from './slices/user.slice'
 import appSlice from './slices/app.slice'
+import casesSlice from './slices/cases.slice'
 
 const rootReducer = combineReducers({
   user: userSlice,
   app: appSlice,
+  cases: casesSlice,
 })
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
